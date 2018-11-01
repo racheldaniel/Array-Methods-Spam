@@ -243,3 +243,12 @@ let customers = [
 
 // From that array, extract just the customers' contact email addresses and store them in a new array. (Hint: you may want to use forEach() and/or concat() or any other array methods you have learned.)
 
+let emails = []
+
+customers.forEach((person) => {
+  emails.push(person.contacts.email)
+})
+
+emails = emails.reduce((a, b) => a.concat(b))
+
+console.log(emails)
